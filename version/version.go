@@ -15,7 +15,7 @@ var (
 func GetVersion() string {
 	if VERSION != "" {
 		return fmt.Sprintf(
-			"\n\tfree5GC version: %s"+
+			"\n\tacore2026 version: %s"+
 				"\n\tbuild time:      %s"+
 				"\n\tcommit hash:     %s"+
 				"\n\tcommit time:     %s"+

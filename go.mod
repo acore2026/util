@@ -3,9 +3,9 @@ module github.com/acore2026/util
 go 1.25.5
 
 require (
-	github.com/evanphx/json-patch/v5 v5.9.0
 	github.com/acore2026/nas v1.2.2
 	github.com/acore2026/ngap v1.1.2
+	github.com/evanphx/json-patch/v5 v5.9.0
 	github.com/gin-gonic/gin v1.10.0
 	github.com/golang-jwt/jwt/v5 v5.2.2
 	github.com/mitchellh/mapstructure v1.5.0
@@ -21,6 +21,7 @@ require (
 )
 
 require (
+	github.com/acore2026/aper v1.1.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/bytedance/sonic v1.11.6 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
@@ -28,7 +29,6 @@ require (
 	github.com/cloudwego/base64x v0.1.4 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/acore2026/aper v1.1.0 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
@@ -67,3 +67,15 @@ require (
 	google.golang.org/protobuf v1.36.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/acore2026/aper => ../aper
+
+replace github.com/acore2026/nas => ../nas
+
+replace github.com/acore2026/ngap => ../ngap
+
+replace github.com/acore2026/openapi => ../openapi
+
+replace github.com/acore2026/sctp => ../sctp
+
+replace github.com/acore2026/util => ../util
