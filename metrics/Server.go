@@ -14,7 +14,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/sirupsen/logrus"
 
-	"github.com/free5gc/util/httpwrapper"
+	"github.com/acore2026/util/httpwrapper"
 )
 
 type Server struct {

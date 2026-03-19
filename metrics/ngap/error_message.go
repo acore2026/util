@@ -1,7 +1,7 @@
 package ngap
 
 import (
-	"github.com/free5gc/ngap/ngapType"
+	"github.com/acore2026/ngap/ngapType"
 )
 
 func getCauseRadioNetworkErrorStr(cause *ngapType.CauseRadioNetwork) string {

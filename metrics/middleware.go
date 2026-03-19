@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/free5gc/util/metrics/sbi"
+	"github.com/acore2026/util/metrics/sbi"
 )
 
 // InboundMetrics is a Gin middleware that counts and times each request.

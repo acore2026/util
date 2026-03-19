@@ -4,7 +4,7 @@ package sbi
 import (
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/free5gc/util/metrics/utils"
+	"github.com/acore2026/util/metrics/utils"
 )
 
 func GetSbiOutboundMetrics(namespace string) []prometheus.Collector {

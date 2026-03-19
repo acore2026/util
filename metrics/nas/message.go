@@ -5,10 +5,10 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/free5gc/nas"
-	"github.com/free5gc/nas/nasMessage"
-	"github.com/free5gc/nas/nasType"
-	"github.com/free5gc/util/metrics/utils"
+	"github.com/acore2026/nas"
+	"github.com/acore2026/nas/nasMessage"
+	"github.com/acore2026/nas/nasType"
+	"github.com/acore2026/util/metrics/utils"
 )
 
 var suffixRe = regexp.MustCompile(`\s*\(\d+\)$`)

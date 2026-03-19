@@ -4,10 +4,10 @@ package metrics
 import (
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/free5gc/util/metrics/nas"
-	"github.com/free5gc/util/metrics/ngap"
-	"github.com/free5gc/util/metrics/sbi"
-	"github.com/free5gc/util/metrics/utils"
+	"github.com/acore2026/util/metrics/nas"
+	"github.com/acore2026/util/metrics/ngap"
+	"github.com/acore2026/util/metrics/sbi"
+	"github.com/acore2026/util/metrics/utils"
 )
 
 // Init initializes all Prometheus metrics
