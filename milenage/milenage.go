@@ -143,7 +143,7 @@ func CutAUTN(autn []byte) ([]byte, []byte, []byte) {
  * @ak: AK = 48-bit anonymity key (f5)
  * @akstar: AK = 48-bit anonymity key (f5*)
  */
-func f2345(opc, k, _rand []uint8) (res, ck, ik, ak, akstar []byte, err error) {
+func F2345(opc, k, _rand []uint8) (res, ck, ik, ak, akstar []byte, err error) {
 	res = make([]byte, RES_LEN)
 	ck, ik = make([]byte, CK_LEN), make([]byte, IK_LEN)
 	ak, akstar = make([]byte, AK_LEN), make([]byte, AK_LEN)
@@ -261,7 +261,7 @@ func generateAKAParameters(opc, k, rand, sqn, amf []byte) (ik, ck, xres, autn []
 		return nil, nil, nil, nil, err
 	}
 
-	xres, ck, ik, ak, _, err := f2345(opc, k, rand)
+	xres, ck, ik, ak, _, err := F2345(opc, k, rand)
 	if err != nil {
 		err = errors.Wrap(err, "calculate F2345 failed")
 		return nil, nil, nil, nil, err
@@ -312,7 +312,7 @@ func GenerateAKAParameters(opc, k, rand, sqn, amf []byte) (ik, ck, xres, autn []
 * @err: errors
  */
 func generateKeysWithAUTN(opc, k, rand, autn []byte) (sqnhe, ak, ik, ck, res []byte, err error) {
-	res, ck, ik, ak, _, err = f2345(opc, k, rand)
+	res, ck, ik, ak, _, err = F2345(opc, k, rand)
 	if err != nil {
 		err = errors.Wrap(err, "calculate F2345 failed")
 		return nil, nil, nil, nil, nil, err
@@ -375,7 +375,7 @@ var resynchAMF = []byte{0x00, 0x00}
 func validateAUTS(opc, k, rand, auts []byte) (sqnms []byte, err error) {
 	ConcSQNms, MACS := CutAUTS(auts)
 	// nolint:dogsled
-	_, _, _, _, AKstar, err := f2345(opc, k, rand)
+	_, _, _, _, AKstar, err := F2345(opc, k, rand)
 	if err != nil {
 		return nil, errors.Wrap(err, "calculate F2345 Fail")
 	}
@@ -417,7 +417,7 @@ func ValidateAUTS(opc, k, rand, auts []byte) (sqnms []byte, err error) {
 func generateAUTS(opc, k, rand, sqnms []byte) (auts []byte, err error) {
 	var AKstar []byte
 	// nolint:dogsled
-	_, _, _, _, AKstar, err = f2345(opc, k, rand)
+	_, _, _, _, AKstar, err = F2345(opc, k, rand)
 	if err != nil {
 		return nil, errors.Wrap(err, "calculate f2345 Fail")
 	}
